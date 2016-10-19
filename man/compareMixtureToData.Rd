@@ -75,6 +75,25 @@ It is essential to understand that there are two key structures being explored s
 
 We must be able to match up each individual to the palette which it represents, so that we can order the individuals according to the palette. As such, this implemetation reorders the individuals, and may reorder the clusters themselves, in order to provide a clean representation of the data. If you don't want this, you may try using \code{\link{compareMixtureToDataDirect}}).
 }
+\examples{
+data(arisim)
+
+## The vanilla analysis highlights the existance of genetic drift
+## specific to Pop5 that isn't captured by the mixture
+
+adm<-compareMixtureToData(arisim$mixture,arisim$data,arisim$ids)
+admplot=mixturePlot(adm)
+
+## The same plot but with excess similarity within populations
+## removed highlights that the mixture solution overpredicts the
+## amount of Pop13 admixture in Pop5, and underpredicts the amount
+## of Pop6 admixture in the same population. The same is true for
+## Pop13 to a lesser extent. Each other population is well fit- the
+## variation seen is all within the clusters.
+adm_remself<-compareMixtureToData(arisim$mixture,arisim$data,arisim$ids,remself=10)
+admplot_remself=mixturePlot(adm_remself)
+
+}
 \keyword{admixture}
 \keyword{chromopainter}
 \keyword{finestructure}

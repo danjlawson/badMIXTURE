@@ -32,5 +32,5 @@ install_github("danjlawson/mixChecker")
 ?compareMixtureToData # For the main function that processes the data
 ?compareMixtureToDataDirect # For more manual reordering etc
 ?mixturePlot # For plotting
-```R
+```
 

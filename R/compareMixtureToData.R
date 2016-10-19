@@ -68,16 +68,17 @@
 #' data(arisim)
 #' 
 #' ## The vanilla analysis highlights the existance of genetic drift
-#' specific to Pop5 that isn't captured by the mixture
+#' ## specific to Pop5 that isn't captured by the mixture
+#' 
 #' adm<-compareMixtureToData(arisim$mixture,arisim$data,arisim$ids)
 #' admplot=mixturePlot(adm)
 #'
 #' ## The same plot but with excess similarity within populations
-#' removed highlights that the mixture solution overpredicts the
-#' amount of Pop13 admixture in Pop5, and underpredicts the amount
-#' of Pop6 admixture in the same population. The same is true for
-#' Pop13 to a lesser extent. Each other population is well fit- the
-#' variation seen is all within the clusters.
+#' ## removed highlights that the mixture solution overpredicts the
+#' ## amount of Pop13 admixture in Pop5, and underpredicts the amount
+#' ## of Pop6 admixture in the same population. The same is true for
+#' ## Pop13 to a lesser extent. Each other population is well fit- the
+#' ## variation seen is all within the clusters.
 #' adm_remself<-compareMixtureToData(arisim$mixture,arisim$data,arisim$ids,remself=10)
 #' admplot_remself=mixturePlot(adm_remself)
 #' 
