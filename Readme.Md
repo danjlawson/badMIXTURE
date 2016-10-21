@@ -2,7 +2,7 @@
 
 ## Summary
 
-In [A tutorial on how (not) to over-interpret STRUCTURE/ADMIXTURE bar plots](http://biorxiv.org/content/early/2016/07/28/066431), Daniel Falush, Lucy Lan Dorp and Daniel Lawson discuss how mixture solutions to understand population genetics data may be misinterpreted. This is the R package that performs the analysis in that paper.
+In [A tutorial on how (not) to over-interpret STRUCTURE/ADMIXTURE bar plots](http://biorxiv.org/content/early/2016/07/28/066431), Daniel Falush, Lucy van Dorp and Daniel Lawson discuss how mixture solutions to understand population genetics data may be misinterpreted. This is the R package that performs the analysis in that paper.
 
 ## Abstract
 
@@ -28,7 +28,7 @@ install_github("danjlawson/mixChecker")
 ## Important places to look for inline help
 
 ```R
-?mixCecker # For general instructions
+?mixChecker # For general instructions
 ?compareMixtureToData # For the main function that processes the data
 ?compareMixtureToDataDirect # For more manual reordering etc
 ?mixturePlot # For plotting
