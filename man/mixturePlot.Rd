@@ -107,7 +107,7 @@ Focus your attention on only the first two arguments: \code{adc} which is the pr
 
 It is essential to understand that there are two key structures being explored simultaneously in these plots. The first is the P-dimensional clustering of the data, which defines the similarities; each of the N data points has a similarity to these P clusters. A representation in this space is called a palette. The second is the K-dimensional set of admixture weights. Each of the K "ancestral" or latent variables also has a P dimensional palette. Further, each of the N data points has a K dimensional "admixture" breakdown, seen as a mixture of the K ancestral palettes.
 
-The variety of plots available each explore different aspects of the fit of the miture solution to the data.  We assume that the individuals are ordered by cluster and plot clusters as separated. These must match the palette in order.
+The variety of plots available each explore different aspects of the fit of the mixture solution to the data.  We assume that the individuals are ordered by cluster and plot clusters as separated. These must match the palette in order.
 
 A variety of plot types for "show" are available:
 \itemize{
@@ -140,6 +140,7 @@ NA
 \section{Advanced usage}{
 NA
 }
+
 \examples{
 \dontrun{
 ## Straightforward example:
@@ -183,4 +184,3 @@ gpref=mixturePlot(adm2,"Ancestral",gpref=gpref,uselayout=FALSE)
 \keyword{finestructure}
 \keyword{mixture}
 \keyword{structure}
-

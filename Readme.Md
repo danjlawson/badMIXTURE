@@ -1,4 +1,4 @@
-# mixChecker: An R package for how (not) to over-interpret STRUCTURE/ADMIXTURE bar plots
+#badMIXTURE: An R package for how (not) to over-interpret STRUCTURE/ADMIXTURE bar plots
 
 ## Summary
 
@@ -14,7 +14,7 @@ To replicate these analyses you need to:
 
 * Run [ADMIXTURE](https://www.genetics.ucla.edu/software/admixture/)/[STRUCTURE](http://pritchardlab.stanford.edu/structure.html) or similar to obtain a mixture solution
 * Run [FineSTRUCTURE](www.paintmychromosomes.com) or similar to obtain a Similarity matrix
-* Be familiar enough withR to load these data matrices
+* Be familiar enough with R to load these data matrices
 * Follow the examples in this package
 
 ## How to install this package
@@ -22,13 +22,13 @@ To replicate these analyses you need to:
 ```R
 install.packages("devtools")
 library(devtools)
-install_github("danjlawson/mixChecker")
+install_github("danjlawson/badMIXTURE")
 ```
 
 ## Important places to look for inline help
 
 ```R
-?mixChecker # For general instructions
+?badMIXTURE # For general instructions
 ?compareMixtureToData # For the main function that processes the data
 ?compareMixtureToDataDirect # For more manual reordering etc
 ?mixturePlot # For plotting

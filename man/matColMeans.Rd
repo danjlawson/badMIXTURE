@@ -16,4 +16,3 @@ Take means over columns in a matrix, by grouping all columns listed in poplist
 e.g. if mat is M*N matrix and poplist is length K, returns a M*K matrix
 the names of poplist are used to assign names to the returned matrix
 }
-

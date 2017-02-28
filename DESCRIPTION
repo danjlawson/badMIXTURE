@@ -1,4 +1,4 @@
-Package: mixChecker
+Package: badMIXTURE
 Title: Validating Structure With Chromosome Painting
 Version: 0.0.0.9000
 Authors@R: person("Daniel", "Lawson", email = "dan.lawson@bristol.ac.uk", role = c("aut", "cre"))
@@ -7,4 +7,4 @@ Depends: R (>= 3.2.2)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 6.0.1.9000

@@ -12,4 +12,3 @@ dendrogramHeights(tdend)
 \description{
 Obtain all cuts of a dendrogram
 }
-

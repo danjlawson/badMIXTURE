@@ -12,4 +12,3 @@ MakeColorWYRPB(colby = 0.05)
 \description{
 Make a colour palette moving from White to Yellow to Red to Purple to Blue.
 }
-

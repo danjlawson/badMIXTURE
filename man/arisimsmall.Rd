@@ -3,6 +3,7 @@
 \docType{data}
 \name{arisimsmall}
 \alias{arisimsmall}
+\alias{arisimsmall}
 \title{Small dataset for experimentation}
 \format{arisimsmall contains the following items:
 \itemize{
@@ -27,4 +28,3 @@ A subset of the  \code{\link{arisim}}) data.
 \url{http://biorxiv.org/content/early/2016/07/28/066431}
 }
 \keyword{datasets}
-

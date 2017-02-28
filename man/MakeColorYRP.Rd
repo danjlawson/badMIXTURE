@@ -2,7 +2,7 @@
 % Please edit documentation in R/privateFunctions.R
 \name{MakeColorYRP}
 \alias{MakeColorYRP}
-\title{Make a colour palette moving from Yellow to Red to Purple}
+\title{#' @title Make a colour palette moving from Yellow to Red to Purple}
 \usage{
 MakeColorYRP(colby = 0.05, final = NULL)
 }
@@ -14,4 +14,3 @@ MakeColorYRP(colby = 0.05, final = NULL)
 \description{
 Make a colour palette moving from Yellow to Red to Purple.
 }
-

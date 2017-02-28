@@ -15,4 +15,3 @@ A list of populations, named  by the population identifiers. Each is a chartacte
 \description{
 Takes a data frame converting individual identifiers into cluster ids, and returns this same structure. The cluster ids (and individual ids within each cluster id) appear in the same order they appeared in the data.
 }
-

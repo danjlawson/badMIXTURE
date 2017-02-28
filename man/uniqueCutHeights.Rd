@@ -12,4 +12,3 @@ uniqueCutHeights(tdend)
 \description{
 Obtain all cuts of a dendrogram, return this in a useful format
 }
-

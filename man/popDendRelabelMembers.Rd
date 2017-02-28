@@ -16,4 +16,3 @@ popDendRelabelMembers(popdend, ids, relabel = function(x) x)
 \description{
 Look at each tip of popdend, and find all individuals in the ids structure that have this population. Replace labels with a ; separated character string of the individuals in that population
 }
-

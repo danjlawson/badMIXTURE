@@ -28,4 +28,3 @@ A matrix of dimension P by P
 \description{
 Obtain the prediction of a mixture for each cluster (a P by P matrix), and return a matrix of this dimension but with replace the data for that cluster by its prediction, so that the diagonal is forced to match the prediction. This removes "genetic drift" specific to a given population.
 }
-

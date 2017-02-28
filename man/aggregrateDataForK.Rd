@@ -22,4 +22,3 @@ aggregrateDataForK(popdataraw, popdend, K, combine = matColMeans,
 Cut a tree for the rows of a matrix to get K tips
 Make the popdata that has this new set of rows by taking row means (or whatever combine is set to do)
 }
-

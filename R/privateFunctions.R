@@ -1,3 +1,7 @@
+#' @import grDevices
+#' @import graphics
+#' @import stats
+
 #' @title  Relabel a dendrogram based on IDs
 #'
 #' @description
@@ -151,7 +155,7 @@ idsToList<-function(ids){
 ## COLORS
 
 
-#' @title Make a colour palette moving from Yellow to Red to Purple
+#' #' @title Make a colour palette moving from Yellow to Red to Purple
 #'
 #' @description
 #' Make a colour palette moving from Yellow to Red to Purple.
@@ -160,6 +164,7 @@ idsToList<-function(ids){
 #' @param colby The step size of the difference between successive colours. Each colour transition is characterised by moving one or move RGB colours from 0 to 1 (or vice versa) in steps of colby. Default: 0.05
 #' @param final A colour to place at the end, expressed as an RGB numeric vector. Default: NULL, meaning place no additional colour at the end.
 MakeColorYRP<-function(colby=0.05,final=NULL){
+    require(grDevices)
 tmp<-c(rgb(1,seq(1,0,-colby),0),rgb(1,0,seq(colby,1,colby)),rgb(seq(1-colby,0,-colby),0,1.0))
 	if(is.null(final)) return(tmp)
 	c(tmp,rgb(final[1],final[2],final[3]))
@@ -174,6 +179,7 @@ tmp<-c(rgb(1,seq(1,0,-colby),0),rgb(1,0,seq(colby,1,colby)),rgb(seq(1-colby,0,-c
 #' @param colby The step size of the difference between successive colours. Each colour transition is characterised by moving one or move RGB colours from 0 to 1 (or vice versa) in steps of colby. Default: 0.05
 MakeColorWYRPB<-function(colby=0.05){
     ## makes white/yellow/red/purple/black colour scheme, adding rgb(final) if not null
+    require(grDevices)
     if(length(colby)<5)colby<-rep(colby,each=5)
     c(rgb(1,1,seq(1,0,-colby[1])),
       rgb(1,seq(1,0,-colby[2]),0),

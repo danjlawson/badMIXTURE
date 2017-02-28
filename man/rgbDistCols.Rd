@@ -19,4 +19,3 @@ rgbDistCols(mydata, colorder = c(1, 2, 3, 4), colmax = 0.8,
 \description{
 Makes a colour for each row of the data by embedding it in 4 dimensions, "r,g,b,alpha"
 }
-
