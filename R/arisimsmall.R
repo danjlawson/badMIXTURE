@@ -4,7 +4,7 @@
 #'
 #' @description
 #'
-#' A subset of the  \code{\link{arisim}}) data.
+#' A subset of the  \code{\link{arisim_remnants}}) data.
 #' 
 #' @format arisimsmall contains the following items:
 #' \itemize{

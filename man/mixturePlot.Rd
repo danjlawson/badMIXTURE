@@ -144,8 +144,9 @@ NA
 \examples{
 \dontrun{
 ## Straightforward example:
-data(arisim)
-adm<-compareMixtureToData(arisim$mixture,arisim$data,arisim$ids)
+data(arisim_remnants)
+adm<-compareMixtureToData(arisim_remnants$mixture,
+                          arisim_remnants$data,arisim_remnants$ids)
 gpref=mixturePlot(adm)
 
 ## Example showing individual names clearly

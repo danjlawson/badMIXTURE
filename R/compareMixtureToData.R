@@ -66,12 +66,14 @@
 
 #' @export
 #' @examples
-#' data(arisim)
+#' data(arisim_remnants)
 #' 
 #' ## The vanilla analysis highlights the existance of genetic drift
 #' ## specific to Pop5 that isn't captured by the mixture
 #' 
-#' adm<-compareMixtureToData(arisim$mixture,arisim$data,arisim$fam)
+#' adm<-compareMixtureToData(arisim_remnants$mixture,
+#'                           arisim_remnants$data,
+#'                           ids=arisim_remnants$ids)
 #' admplot=mixturePlot(adm)
 #'
 #' ## The same plot but with excess similarity within populations
@@ -80,7 +82,9 @@
 #' ## of Pop6 admixture in the same population. The same is true for
 #' ## Pop13 to a lesser extent. Each other population is well fit- the
 #' ## variation seen is all within the clusters.
-#' adm_remself<-compareMixtureToData(arisim$mixture,arisim$data,arisim$fam,remself=10)
+#' adm_remself<-compareMixtureToData(arisim_remnants$mixture,
+#'                                   arisim_remnants$data,
+#'                                   ids=arisim_remnants$ids,remself=10)
 #' admplot_remself=mixturePlot(adm_remself)
 #' 
 compareMixtureToData<-function(mix,dataraw,
@@ -99,7 +103,10 @@ compareMixtureToData<-function(mix,dataraw,
     ## Make the data
     if(is.null(fam) && is.null(ids)) stop("Must provide fam or ids file!")
     if(is.null(ids)){## Make a legitimate ids object from the fam
-        ids=data.frame(id=fam[,2],group=fam[,1],retain=1)
+        if(length(unique(fam[,1]))==length(fam[,1])) {tgrp=2;tid=1
+        }else if(length(unique(fam[,2]))==length(fam[,2])) { tgrp=1;tid=2
+        }else stop("Invalid fam file provided!")
+        ids=data.frame(id=fam[,tid],group=fam[,tgrp],retain=1)
     }
     ## Cluster by IDs
     tpops<-unique(ids[,2])

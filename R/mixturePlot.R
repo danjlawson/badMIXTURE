@@ -85,8 +85,9 @@
 #' @examples
 #' \dontrun{
 #' ## Straightforward example:
-#' data(arisim)
-#' adm<-compareMixtureToData(arisim$mixture,arisim$data,arisim$ids)
+#' data(arisim_remnants)
+#' adm<-compareMixtureToData(arisim_remnants$mixture,
+#'                           arisim_remnants$data,arisim_remnants$ids)
 #' gpref=mixturePlot(adm)
 #'
 #' ## Example showing individual names clearly
@@ -501,7 +502,7 @@ plotAdmixtureResidualMatrix<-function(adc,
     barplot(t(adc$selfmatrix),col="white",border=NA,ylim=c(-gpref$residual.scale,1),
             space=adc$tspace,las=2,
             main="",axes=FALSE,axisnames=FALSE,xlim=gpref$xlim,xpd=FALSE)
-    mtext("Residuals (data - prediction)",
+    if(gpref$showtitle) mtext("Residuals (data - prediction)",
           3,line=gpref$line.above,cex=gpref$cex.main)
 
     ty<-dim(plotdata)[2]
