@@ -101,6 +101,21 @@ compareMixtureToData<-function(mix,dataraw,
                                mycols2=NULL,
                                gap=3){
     ## Make the data
+    if(class(dataraw)!="matrix") {
+        dataraw=as.matrix(dataraw)
+        if(class(dataraw[,1])=="character") stop("dataraw contains characters. It must contain numeric values.")
+    }
+    if(class(mix)!="matrix"){
+        mix=as.matrix(mix)
+        if(class(mix[,1])=="character") stop("mix contains characters. It must contain numeric values.")
+    }
+    if(is.null(rownames(dataraw))){
+        stop("No row names in dataraw. Since these are provided by mixPainter, they are expected to be set and are important for matching data.")
+    }
+    if(is.null(rownames(mix))){
+        warning("No rownames provided in mix. Assuming that they match those in dataraw. If this is not true, you must set them manually.")
+        rownames(mix)=rownames(dataraw)
+    }
     if(is.null(fam) && is.null(ids)) stop("Must provide fam or ids file!")
     if(is.null(ids)){## Make a legitimate ids object from the fam
         if(length(unique(fam[,1]))==length(fam[,1])) {tgrp=2;tid=1
@@ -108,7 +123,7 @@ compareMixtureToData<-function(mix,dataraw,
         }else stop("Invalid fam file provided!")
         ids=data.frame(id=fam[,tid],group=fam[,tgrp],retain=1)
     }
-    ## Cluster by IDs
+    ## Cluster by IDs
     tpops<-unique(ids[,2])
     poplistunsrt<-lapply(tpops,function(x){
         ids[ids[,2]==x,1]
