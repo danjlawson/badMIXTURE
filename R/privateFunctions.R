@@ -101,9 +101,17 @@ dendrogramHeights<-function(tdend){
 rgbDistCols<-function(mydata, colorder=c(1,2,3,4),colmax=0.8, alphamin=0.5){
     ##     require("MASS") # Only requred for the isoMDS implementation, disabled
     d <- dist(mydata) # euclidean distances between the rows
-    fit <- cmdscale(d,eig=TRUE, k=4) # k is the number of dim
+    mydim=dim(mydata)[2]
+    if(mydim<=4){
+        emb=matrix(c(1,0,0,1,
+                     0,1,0,1,
+                     0,0,1,1,
+                     0.5,0.5,1,1),byrow=T,ncol=4)[1:mydim,,drop=FALSE]
+    }else{
+        fit <- cmdscale(d,eig=TRUE, k=4) # k is the number of dim
 #    fit <- isoMDS(d, k=4) # k is the number of dim
-    emb<-as.matrix(fit$points)
+        emb<-as.matrix(fit$points)
+    }
     row.names(emb)<-NULL
     emb<-apply(emb,2,function(x){
         (order(x)-1)/(length(x)-1)
