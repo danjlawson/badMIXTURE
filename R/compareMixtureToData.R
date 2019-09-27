@@ -207,7 +207,7 @@ compareMixtureToData<-function(mix,dataraw,
 #' \dontrun{
 #' data(arisimsmall)
 #' ## Example where we reorder the populations manually
-#' adm0<-compareMixtureToData(arisimsmall$mixture,arisimsmall$data,arisimsmall$fam)
+#' adm0<-compareMixtureToData(arisimsmall$mixture,arisimsmall$data,arisimsmall$ids)
 #' mypoplist=adm0$poplist[paste0("Pop",c(13,5:7,1:4,9,11,12))]
 #' mymix=adm0$mix[unlist(mypoplist),]
 #' mydata=adm0$data.NbyP[unlist(mypoplist),names(mypoplist)]

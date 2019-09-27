@@ -9,7 +9,7 @@
 #' 
 #' We therefore need "data" (the set of similarities to each of the clusters, which can be computed from similarities to all individuals), a "mixture solution" to test, and a record of which individuals make up which clusters.
 #'
-#' The functions you're likely to need from \pkg{badMIXTURE} are first \code{\link{compareMixtureToData}}, which performs the calculations, and
+#' START WITH \code{\link{compareMixtureToData}}: The functions you're likely to need from \pkg{badMIXTURE} are first \code{\link{compareMixtureToData}}, which performs the calculations, and
 #' \code{\link{mixturePlot}} which displays the results.  The example section for these functions contain several cases to get you started. See also \code{?arisim} for information about the included data, and \code{arisimsmall} for a subset of this dataset that is easy to experiment on.
 #'
 #' If you want to reorder, look at \code{\link{compareMixtureToDataDirect}} and the example in it.
