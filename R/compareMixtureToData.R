@@ -121,7 +121,7 @@ compareMixtureToData<-function(mix,dataraw,
         if(length(unique(fam[,1]))==length(fam[,1])) {tgrp=2;tid=1
         }else if(length(unique(fam[,2]))==length(fam[,2])) { tgrp=1;tid=2
         }else stop("Invalid fam file provided!")
-        ids=data.frame(id=fam[,tid],group=fam[,tgrp],retain=1)
+        ids=data.frame(id=as.character(fam[,tid]),group=as.character(fam[,tgrp]),retain=1,stringsAsFactors=FALSE)
     }
     ## Cluster by IDs
     tpops<-unique(ids[,2])
@@ -207,7 +207,7 @@ compareMixtureToData<-function(mix,dataraw,
 #' \dontrun{
 #' data(arisimsmall)
 #' ## Example where we reorder the populations manually
-#' adm0<-compareMixtureToData(arisimsmall$mixture,arisimsmall$data,arisimsmall$ids)
+#' adm0<-compareMixtureToData(arisimsmall$mixture,arisimsmall$data,ids=arisimsmall$ids)
 #' mypoplist=adm0$poplist[paste0("Pop",c(13,5:7,1:4,9,11,12))]
 #' mymix=adm0$mix[unlist(mypoplist),]
 #' mydata=adm0$data.NbyP[unlist(mypoplist),names(mypoplist)]
